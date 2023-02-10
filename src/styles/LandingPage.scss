@@ -1,15 +1,18 @@
+.hero-main {
+  display: flex;
+}
+
 .hero {
-  min-height: 90vh;
-  min-width: 100vw;
-  width: 100vw;
+  min-height: 85vh;
+  min-width: 50vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 20px 0px;
+  img {
+    height: 12vh;
+    width: 30vw;
   }
   p {
     font-size: 1.1rem;
@@ -31,14 +34,62 @@
       background: none;
     }
     button.create-dao-btn {
-      background-color: #1B143E;
+      background-color: #1b143e;
       color: #fff;
-      border: 1px solid #1B143E;
+      border: 1px solid #1b143e;
     }
     button.existing-dao-btn {
       background-color: white;
-      color: #1B143E;
-      border: 1px solid #1B143E;
+      color: #1b143e;
+      border: 1px solid #1b143e;
     }
   }
+}
+
+.hero-footer {
+  background-color: #47415f;
+  display: flex;
+  min-height: 15vh;
+  bottom: 0;
+
+  .hero-footer-img {
+    height: 6vh;
+    width: 12vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-left: 15vw;
+  }
+}
+
+.hero-right {
+  margin-top: 20vh;
+}
+
+.hero-footer-right-main {
+  display: flex;
+  margin: 0 auto;
+  height: 10vh;
+}
+
+.hero-footer-logo {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  margin-left: 2vw;
+  margin-top: 5vh;
+  cursor: pointer;
+}
+
+.hero-footer-copy {
+  position: absolute;
+  margin-top: 9vh;
+  padding-top: 2vh;
+  color: #fff;
+  margin-left: 4vw;
+}
+
+.magnifying-glass {
+  background: #fcfddc no-repeat;
 }

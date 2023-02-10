@@ -82,7 +82,7 @@ function CreateDao() {
           </div> */}
         </div>
         <div className="stp-form">
-          <StepsForm 
+          <StepsForm
             activeStep={activeStep}
             handleNext={handleNext}
             handleBack={handleBack}

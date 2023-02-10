@@ -11,9 +11,9 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+// import AdbIcon from "@mui/icons-material/Adb";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import logo from '../assets/LOGO.png'
+import logo from "../assets/LOGO1.png";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -38,10 +38,14 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor: "#FF788E    "}}>
-      <Container maxWidth="xl" >
-        <Toolbar disableGutters >
-          <img src={logo} style={{ maxHeight: "250px", width : "230px"}}/>
+    <AppBar position="static" sx={{ backgroundColor: "#FF788E    " }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <img
+            src={logo}
+            style={{ maxHeight: "250px", width: "230px" }}
+            alt="logo"
+          />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -79,8 +83,8 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -97,13 +101,13 @@ function Navbar() {
             }}
           >
             LOGO
-          </Typography>
+          </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#1B143E" , display: "block" }}
+                sx={{ my: 2, color: "#1B143E", display: "block" }}
               >
                 {page}
               </Button>

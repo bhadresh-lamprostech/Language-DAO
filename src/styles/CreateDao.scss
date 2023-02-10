@@ -1,5 +1,13 @@
+.conncet-btn-div {
+  margin: 10px;
+}
+
+.css-2msp6p-MuiButtonBase-root-MuiButton-root {
+  color: #ffffff !important;
+}
+
 .create-dao-main {
-  width: 100vw;
+  width: auto;
   min-width: 90vh;
   // display: flex;
   flex-wrap: nowrap;
@@ -10,7 +18,7 @@
     // min-height: 90vh;
     // max-height: 90vh;
     padding: 40px 30px;
-    background: #47415f;
+    background: #fcfddc;
     // display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,13 +37,15 @@
     // min-height: 90vh;
     text-align: center;
     padding: 40px 30px;
-    background-color: #47415f;
+    background-color: #fcfddc;
 
     .create-dao-info-main {
       border-radius: 50px;
       border-radius: 50px;
-      background: #47415f;
-      box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+      background: #fcfddc;
+      // box-shadow: 20px 20px 60px #fcfddc, -20px -20px 60px #fcfddc;
+      // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      box-shadow: 20px 20px 60px #d6d7bb, -20px -20px 60px #fffffd;
       width: 100%;
       max-width: 800px;
       min-height: 500px;
@@ -45,7 +55,7 @@
       margin: 40px auto;
 
       h1 {
-        color: #ffffff;
+        color: #000000;
         // padding: 40px 0px;
         padding-top: 0px;
         padding-bottom: 0px;
@@ -65,11 +75,12 @@
             margin: 30px 0px;
             padding: 20px;
             width: 100%;
-            color: #ffffff;
+            color: #000000;
             font-size: 1.1rem;
-            border-radius: 50px;
-            background: #47415f;
-            box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+            border-radius: 20px;
+            background: #fcfddc;
+            // box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+            // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             border: none;
           }
           textarea {
@@ -78,11 +89,12 @@
             width: 100%;
             padding: 20px;
             resize: none;
-            color: #ffffff;
+            color: #000000;
             border: none;
             border-radius: 20px;
-            background: #47415f;
-            box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+            background: #fcfddc;
+            // box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+            // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           }
         }
       }
@@ -101,28 +113,31 @@
           align-items: center;
           // width: 80%;
           border-radius: 10px;
-          background: #47415f;
-          box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+          background: #fcfddc;
+          // box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+          // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
         span.display-vote {
           border: 1px solid#1B143E;
           padding: 10px 40px;
-
-          background-color: #1b143e;
-          border-radius: 50px;
-          background: #47415f;
-          box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+          max-width: 10vw;
+          background-color: #fcfddc;
+          border-radius: 10px;
+          // background: #47415f;
+          // box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+          // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
         input.display-vote-period {
           border: none;
           padding: 10px;
-          color:#ffffff;
-          border-radius: 50px;
-            background: #47415f;
-            box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+          color: #000000;
+          border-radius: 10px;
+          background: #fcfddc;
+          // box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+          // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           width: 30%;
           font-size: 1.1rem;
-          border: 1px solid#1B143E; 
+          border: 1px solid#1B143E;
           // margin: 0px 10px;
         }
       }
@@ -142,14 +157,14 @@
         input {
           padding: 10px;
           margin-right: 20px;
-        color : #ffffff;
+          color: #000000;
           box-shadow: none;
           font-size: 1.1rem;
           border: 1px solid#1B143E;
-        border-radius: 50px;
-background: #47415F;
-box-shadow:  20px 20px 60px #3c3751,
-             -20px -20px 60px #524b6d;
+          border-radius: 10px;
+          background: #fcfddc;
+          // box-shadow: 20px 20px 60px #3c3751, -20px -20px 60px #524b6d;
+          // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
         .token-config-child-1 {
           display: flex;
