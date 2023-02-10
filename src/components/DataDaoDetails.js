@@ -68,14 +68,15 @@ function DataDaoDetails({ setDatadaos, setSingleDataDao }) {
                     Request Dataset
                   </Button>
                 </div>
-                <button
+                <Button
+                  className="datadao-details-btn-cls"
                   onClick={() => {
                     setDatadaos(true);
                     setSingleDataDao(false);
                   }}
                 >
                   Close
-                </button>
+                </Button>
               </div>
             </div>
           </div>

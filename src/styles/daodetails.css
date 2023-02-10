@@ -26,7 +26,14 @@
 .datadao-details-btn {
   width: 100%;
 }
+
+.datadao-details-btn-cls {
+}
+
 .datadao-details-section2 {
   /* border-bottom: 1px solid black; */
   padding: 20px;
+}
+.datadao-details-button {
+  margin: 10px;
 }
