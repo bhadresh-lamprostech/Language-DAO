@@ -1,0 +1,19 @@
+.nav-img {
+  width: 16vw;
+  height: 8vh;
+}
+
+.conncet-btn-div {
+  margin-left: 40vw;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .nav-img {
+    width: 50vw;
+    height: 5vh;
+    margin-left: -4vw;
+  }
+  .conncet-btn-div {
+    margin-left: 1vw;
+  }
+}
