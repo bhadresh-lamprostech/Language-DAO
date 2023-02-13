@@ -4,16 +4,37 @@
 }
 
 .conncet-btn-div {
-  margin-left: 40vw;
+  margin-left: auto;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 425px) {
+@media only screen and (max-width: 767px) {
   .nav-img {
-    width: 50vw;
-    height: 5vh;
-    margin-left: -4vw;
+    width: 50%;
+    height: 10%;
+    padding: 10px;
+    /* margin-left: -4vw; */
   }
-  .conncet-btn-div {
-    margin-left: 1vw;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-img {
+    width: 30%;
+    height: 8vh;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .nav-img {
+    width: 25%;
+    height: 8vh;
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+  .nav-img {
+    width: 16vw;
+    height: 8vh;
   }
 }

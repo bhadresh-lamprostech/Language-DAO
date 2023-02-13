@@ -7,7 +7,7 @@ import { BsGlobe2, BsFillTelephoneFill } from "react-icons/bs";
 import "../styles/LandingPage.scss";
 import Logo from "../assets/LOGO1.png";
 import Hero from "../assets/hero.png";
-import Hero1 from "../assets/hero1.png";
+// import Hero1 from "../assets/hero1.png";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -21,7 +21,8 @@ function LandingPage() {
     <>
       <div className="hero-main">
         <div className="hero">
-          <img src={Hero1} alt="samitha" />
+          {/* <img src={Hero1} alt="samitha" /> */}
+          <h1>SamhitaDAO</h1>
           <p>Create your own DataDao in few minutes with ease.</p>
 
           <div className="hero-btns">
@@ -35,7 +36,7 @@ function LandingPage() {
               className="existing-dao-btn"
               onClick={() => openExistingDaoPage()}
             >
-              Open Existing DataDao
+              Existing DataDao
             </button>
           </div>
         </div>
