@@ -38,9 +38,8 @@ export default function StepsForm({
           <Step key={step.label}>
             <StepLabel
               optional={
-                index === 2 ? (
-                  <Typography variant="caption">Last step</Typography>
-                ) : null
+                // Last step
+                index === 2 ? <Typography variant="caption"></Typography> : null
               }
             >
               {step.label}
