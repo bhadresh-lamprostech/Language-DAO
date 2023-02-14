@@ -4,6 +4,14 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import MembershipToken from "../../contracts/artifacts/DataDaoToken.json";
+import dataDaoInstace from "../../contracts/artifacts/dataDaoInstace.json";
+import dataDaoFactory from "../../contracts/artifacts/dataDaoFactory.json";
+import { useAccount } from "wagmi";
+import { ethers } from "ethers";
+import { ContractFactory } from "ethers";
+
+const dataDaoFactoryContract = "0x8428C82cFf9F7B5b25E2b54C7DF663Fe0002526a";
 
 function ReviewInfo({
   handleNext,
@@ -11,11 +19,93 @@ function ReviewInfo({
   dataDaoDetails,
   setDataDaoDetails,
 }) {
+  const { address } = useAccount();
+  const getContract = async () => {
+    try {
+      const { ethereum } = window;
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        if (!provider) {
+          console.log("Metamask is not installed, please install!");
+        }
+        const { chainId } = await provider.getNetwork();
+        console.log("switch case for this case is: " + chainId);
+        if (chainId === 3141) {
+          const contract = new ethers.Contract(
+            dataDaoFactoryContract,
+            dataDaoFactory.abi,
+            signer
+          );
+          return contract;
+        } else {
+          alert("Please connect to the Filecoin Hyperspace Network!");
+        }
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+  const votingPeriodEpoch =
+    Math.floor(dataDaoDetails.vote_period_day) * 86400 +
+    Math.floor(dataDaoDetails.vote_period_hour) * 3600 +
+    Math.floor(dataDaoDetails.vote_period_minutes) * 60;
+  console.log(votingPeriodEpoch);
+  const { ethereum } = window;
+
+  const provider = new ethers.providers.Web3Provider(ethereum);
+  const signer = provider.getSigner();
+
+  const luanchDataDao = async () => {
+    const contract = await getContract();
+    const tokecFactory = new ContractFactory(
+      MembershipToken.abi,
+      MembershipToken.data.bytecode,
+      signer
+    );
+    const tokenContract = await tokecFactory.deploy(
+      dataDaoDetails.token_name,
+      dataDaoDetails.token_symbol,
+      10000
+    );
+
+    const tokenAddress = tokenContract.address;
+
+    console.log(tokenAddress);
+    const daoFactory = new ContractFactory(
+      dataDaoInstace.abi,
+      dataDaoInstace.data.bytecode,
+      signer
+    );
+    const daoContract = await daoFactory.deploy(
+      address,
+      tokenAddress,
+      dataDaoDetails.vote_condition,
+      dataDaoDetails.vote_minapproval,
+      votingPeriodEpoch,
+      0
+    );
+    const dataDaoAddress = daoContract.address;
+
+    const tx = await contract.createDataDao(
+      dataDaoAddress,
+      dataDaoDetails.name,
+      dataDaoDetails.description,
+      tokenAddress,
+      0,
+      dataDaoDetails.token_holders[0].tokenHolderBalance
+    );
+    // await tx.wait(); //dataDaoAddress,name, description, token, tokenPrice, totalSupply
+    console.log(tx);
+  };
+
+  console.log(dataDaoDetails);
 
   return (
     <div className="create-dao-info-main">
@@ -131,7 +221,12 @@ function ReviewInfo({
                 margin: "10px 0px",
               }}
             >
-              {dataDaoDetails.vote_period} %
+              {dataDaoDetails.vote_period_day +
+                " day, " +
+                dataDaoDetails.vote_period_hour +
+                " hours, " +
+                dataDaoDetails.vote_period_minutes +
+                " minutes. "}
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -191,7 +286,12 @@ function ReviewInfo({
         <button className="create-dao-back" onClick={handleBack}>
           Back
         </button>
-        <button className="create-dao-next" onClick={handleNext}>
+        <button
+          className="create-dao-next"
+          onClick={() => {
+            luanchDataDao();
+          }}
+        >
           Launch DataDao
         </button>
       </div>
