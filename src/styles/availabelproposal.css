@@ -18,7 +18,8 @@
   margin-bottom: 10px;
 }
 .availabel-proposal-section2 {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
@@ -26,7 +27,8 @@
 }
 .proposal-details {
   /* border: 1px solid gray; */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10px;
   padding: 20px;
 }
@@ -36,4 +38,35 @@
 }
 .proposal-grid-title {
   margin: 8px 0px 0px 0px;
+}
+
+@media only screen and (max-width: 767px) {
+  .availabel-proposal-section1 {
+    flex-direction: column;
+  }
+  .availabel-proposal-section2 {
+    flex-direction: column;
+  }
+  .proposal-date {
+    margin: 10px;
+  }
+  /* .css-8atqhb {
+    display: grid;
+  } */
+  .css-10mzr36-MuiGrid-root {
+    flex-direction: column !important;
+  }
+  .proposal-details {
+    width: 80vw;
+    margin-left: -15vw;
+  }
+  .proposal-margin-div {
+    margin-left: 3vw;
+  }
+  #uploadfile-btn {
+    margin-left: 3vw;
+  }
+  .css-8atqhb {
+    margin-bottom: 20px;
+  }
 }

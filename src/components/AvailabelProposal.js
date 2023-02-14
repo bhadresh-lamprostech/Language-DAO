@@ -29,8 +29,7 @@ function AvailabelProposal() {
     transform: "translate(-50%, -50%)",
     width: 900,
     bgcolor: "background.paper",
-    
- 
+
     p: 4,
   };
 
@@ -168,7 +167,11 @@ function AvailabelProposal() {
                       />
                     </div>
                     <div className="uploadfile">
-                      <Button variant="contained" size="large">
+                      <Button
+                        variant="contained"
+                        size="large"
+                        id="uploadfile-btn"
+                      >
                         Vote
                       </Button>
                     </div>
@@ -203,7 +206,11 @@ function AvailabelProposal() {
                       />
                     </div>
                     <div className="uploadfile">
-                      <Button variant="contained" size="large">
+                      <Button
+                        variant="contained"
+                        size="large"
+                        id="uploadfile-btn"
+                      >
                         Vote
                       </Button>
                     </div>
