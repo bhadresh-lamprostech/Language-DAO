@@ -13,6 +13,7 @@ import Container from "@mui/material/Container";
 // import MenuItem from "@mui/material/MenuItem";
 // import AdbIcon from "@mui/icons-material/Adb";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/LOGO1.png";
 import "../styles/navbar.css";
 
@@ -20,6 +21,11 @@ import "../styles/navbar.css";
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
+  let navigate = useNavigate();
+  const routeChange = () => {
+    // let path = `newPath`;
+    navigate("/");
+  };
   // const [anchorElNav, setAnchorElNav] = useState();
   // const [anchorElUser, setAnchorElUser] = useState();
 
@@ -43,6 +49,7 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img
+            onClick={routeChange}
             className="nav-img"
             src={logo}
             // style={{ maxHeight: "250px", width: "230px" }}

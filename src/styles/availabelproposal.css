@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   margin: 20px;
+  margin-top: 40px;
 }
 .availabel-proposal {
   width: 50%;
@@ -14,21 +15,20 @@
 .A-proposal-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  /* margin-top: 40px; */
+  margin-bottom: 40px;
 }
 .availabel-proposal-section2 {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 40px;
 }
 .proposal-details {
   /* border: 1px solid gray; */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   padding: 20px;
 }
@@ -38,6 +38,14 @@
 }
 .proposal-grid-title {
   margin: 8px 0px 0px 0px;
+}
+
+.css-jh47zj-MuiButtonBase-root-MuiButton-root {
+  background-color: #1b143e !important;
+}
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  background-color: #1b143e !important;
 }
 
 @media only screen and (max-width: 767px) {

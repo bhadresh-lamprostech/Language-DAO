@@ -25,11 +25,11 @@
     }
     button.card-show-more-btn {
       padding: 10px 20px;
-      background-color: #1976d2c7;
+      background-color: #1b143e;
       color: #fff;
 
       &:hover {
-        background-color: #1976d2;
+        background-color: #1b143e;
       }
     }
     p.template-info {
@@ -49,7 +49,7 @@
   margin: 70px auto;
   min-height: 90vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
 
   justify-content: center;
 
@@ -58,6 +58,11 @@
     // border: 1px solid black;
     padding: 20px 30px;
     font-family: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    // margin: 10px;
+    margin: 0 auto;
+    height: auto;
     img {
       width: 140px;
       border-radius: 999999px;
@@ -93,11 +98,17 @@
     }
   }
   div.right-div {
-    width: 40%;
-    padding: 50px 30px;
-    border-left: 1px solid #000000;
+    width: 60%;
+    padding: 50px 100px 20px;
+    // border-left: 1px solid #000000;
     text-align: center;
     font-family: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    // margin: 10px;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+
     h2 {
       color: #000000;
     }
@@ -106,13 +117,13 @@
     margin: 50px 0px;
     // border: 1px solid black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
     .included-item {
-      width: 60%;
-      margin: 10px 0px;
+      // width: 60%;
+      margin: 10px 10px 10px 10px;
       //   border: 1px solid black;
       display: flex;
       flex-direction: row;
@@ -128,6 +139,18 @@
       }
     }
   }
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
+  color: #1b143e !important;
+}
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: #1b143e !important;
+}
+
+.css-187mznn-MuiSlider-root {
+  color: #1b143e !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -158,11 +181,11 @@
       }
       button.card-show-more-btn {
         padding: 10px 20px;
-        background-color: #1976d2c7;
+        background-color: #1b143e;
         color: #fff;
 
         &:hover {
-          background-color: #1976d2;
+          background-color: #1b143e;
         }
       }
       p.template-info {
@@ -228,7 +251,7 @@
     div.right-div {
       width: 40%;
       padding: 50px 30px;
-      border-left: 1px solid #000000;
+      // border-left: 1px solid #000000;
       text-align: center;
       display: none;
       h2 {

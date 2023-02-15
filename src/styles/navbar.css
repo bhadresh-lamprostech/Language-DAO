@@ -1,6 +1,7 @@
 .nav-img {
   width: 16vw;
   height: 8vh;
+  cursor: pointer;
 }
 
 .conncet-btn-div {

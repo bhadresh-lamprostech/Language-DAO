@@ -41,7 +41,7 @@
       background: #fcfddc;
       // box-shadow: 20px 20px 60px #fcfddc, -20px -20px 60px #fcfddc;
       // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      box-shadow: 20px 20px 60px #d6d7bb, -20px -20px 60px #fffffd;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       width: 100%;
       max-width: 800px;
       min-height: 500px;
@@ -215,6 +215,17 @@
       }
     }
   }
+}
+
+.css-1nb3drq-MuiButtonBase-root-MuiAccordionSummary-root {
+  background-color: #1b143e !important;
+  margin-bottom: 10px !important;
+  border-radius: 10px !important;
+}
+
+.css-1e8dtmd-MuiPaper-root-MuiAccordion-root {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 @media only screen and (max-width: 767px) {

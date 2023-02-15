@@ -1,14 +1,15 @@
 import React from "react";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import "../styles/alldatadaos.css";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+// import FormControl from "@mui/material/FormControl";
+// import Select from "@mui/material/Select";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
+// import Paper from "@mui/material/Paper";
+// import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { ContractFactory, ethers } from "ethers";
+// import Button from "@mui/material/Button";
+// ContractFactory
+import { ethers } from "ethers";
 import dataDaoFactory from "../contracts/artifacts/dataDaoFactory.json";
 
 const dataDaoFactoryContract = "0x8428C82cFf9F7B5b25E2b54C7DF663Fe0002526a";
@@ -46,7 +47,7 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
 
   const getAllDataDaos = async () => {
     const contract = await getContract();
-    console.log(contract)
+    console.log(contract);
     const dataDaos = await contract.getAllDataDaos();
     console.log(dataDaos);
     setDataDaos(dataDaos);
@@ -59,6 +60,7 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
     <>
       <div className="all-datadao-main-div">
         <div className="all-datadao-div">
+          dataDaoAddress
           <div className="all-datadao-section1">
             <h1 className="all-datadao-title">All DataDAOs</h1>
             <p className="all-datadao-title">
@@ -111,6 +113,7 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
                                         <rect
                                           fill="none"
                                           height="24"
+                                          dataDaoAddress
                                           width="24"
                                         />
                                       </g>
@@ -119,6 +122,7 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
                                       </g>
                                     </svg>
                                   </div>
+                                  dataDaoAddress
                                 </td>
                               </tr>
                               <tr>
