@@ -8,6 +8,9 @@ import MembershipToken from "../../contracts/artifacts/DataDaoToken.json";
 import dataDaoInstace from "../../contracts/artifacts/dataDaoInstace.json";
 import dataDaoFactory from "../../contracts/artifacts/dataDaoFactory.json";
 import { useAccount } from "wagmi";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import { ethers } from "ethers";
 import { ContractFactory } from "ethers";
 
@@ -101,8 +104,16 @@ function ReviewInfo({
       0,
       dataDaoDetails.token_holders[0].tokenHolderBalance
     );
-    // await tx.wait(); //dataDaoAddress,name, description, token, tokenPrice, totalSupply
+    await tx.wait();
+    toast.success("Transaction successful!");
+    //dataDaoAddress,name, description, token, tokenPrice, totalSupply
     console.log(tx);
+  };
+
+  let navigate = useNavigate();
+  const routeChange = () => {
+    // let path = `newPath`;
+    navigate("/");
   };
 
   console.log(dataDaoDetails);
@@ -295,6 +306,18 @@ function ReviewInfo({
           Launch DataDao
         </button>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        // closeOnClick
+        onClick={routeChange}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

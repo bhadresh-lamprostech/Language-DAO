@@ -28,6 +28,9 @@
 }
 
 .datadao-details-btn-cls {
+  width: 13vw;
+  margin-left: 0.6vw !important;
+  margin-top: 1.3vh !important;
 }
 
 .datadao-details-section2 {

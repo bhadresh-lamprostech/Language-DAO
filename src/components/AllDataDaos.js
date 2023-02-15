@@ -10,6 +10,8 @@ import Box from "@mui/material/Box";
 // import Button from "@mui/material/Button";
 // ContractFactory
 import { ethers } from "ethers";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import dataDaoFactory from "../contracts/artifacts/dataDaoFactory.json";
 
 const dataDaoFactoryContract = "0x8428C82cFf9F7B5b25E2b54C7DF663Fe0002526a";
@@ -56,11 +58,23 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
   useEffect(() => {
     getAllDataDaos();
   }, []);
+
+  const toastInfo = () => toast.success("Address Copied");
+  const copyContent = async (e) => {
+    try {
+      await navigator.clipboard.writeText(e);
+      toastInfo();
+      console.log("Content copied to clipboard");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
+
   return (
     <>
       <div className="all-datadao-main-div">
         <div className="all-datadao-div">
-          dataDaoAddress
+          {/* dataDaoAddress */}
           <div className="all-datadao-section1">
             <h1 className="all-datadao-title">All DataDAOs</h1>
             <p className="all-datadao-title">
@@ -76,7 +90,10 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
                       allDataDaos.map((dao, i) => (
                         <Grid item xs={4}>
                           {" "}
-                          <div className="proposal-details">
+                          <div
+                            className="proposal-details"
+                            id="proposal-details-main"
+                          >
                             <table>
                               <thead>
                                 <tr>
@@ -90,7 +107,7 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
                                 </td>
                               </tr>
                               <tr>
-                                <td>
+                                <td id="datadao-address-main">
                                   <div className="datadao-address">
                                     <h3>
                                       {dao.dataDaoAddress.substring(0, 6) +
@@ -108,6 +125,9 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
                                       width="18px"
                                       fill="#4c2ffd"
                                       style={{ margin: "0px 20px" }}
+                                      onClick={() =>
+                                        copyContent(dao.dataDaoAddress)
+                                      }
                                     >
                                       <g>
                                         <rect
@@ -152,6 +172,17 @@ function AllDataDaos({ setSingleDataDao, setDatadaos, setDaoAddress }) {
             </Box>
           </div>
         </div>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </div>
     </>
   );

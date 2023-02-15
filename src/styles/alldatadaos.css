@@ -10,10 +10,18 @@
 .all-datadao-section1 {
   margin-bottom: 50px;
 }
+#datadao-address-main {
+  position: absolute;
+  bottom: 50px;
+  margin-left: 3vw;
+}
 .datadao-address {
-  background-color: aqua;
-  width: 150px;
+  /* background-color: aqua; */
+  width: 300px;
   padding: 10px;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 }
 .all-datadao-section2 {
   width: 60%;

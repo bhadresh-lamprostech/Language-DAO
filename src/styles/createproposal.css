@@ -1,6 +1,12 @@
+.css-1w9q1g1 {
+  background-color: #fcfddc !important;
+  border-radius: 20px !important;
+}
+
 .create-proposal-main-div {
   width: 100%;
   /* background-color: bisque; */
+  background-color: #fcfddc;
 }
 .create-proposal-div {
   width: 80%;

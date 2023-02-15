@@ -1,8 +1,19 @@
+.css-1wnsr1i {
+  background-color: #fcfddc !important;
+  border-radius: 20px !important;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  color: #fcfddc !important;
+  background-color: #1b143e !important;
+}
+
 .add-token-leftbar-token-main {
   /* border: 1px solid gray; */
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #fcfddc;
 }
 .addtoken-title {
   margin: 0;
