@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAccount, useSigner } from "wagmi";
 
-const dataDaoFactoryContract = "0x0caC8C986452628Ed38483bcEE0D1cF85816946D";
+const dataDaoFactoryContract = "0x8428C82cFf9F7B5b25E2b54C7DF663Fe0002526a";
 
 function YourDaos({ setSingleYourDataDao, setYourDaos, setDaoAddress }) {
   const [allDataDaos, setDataDaos] = useState([]);

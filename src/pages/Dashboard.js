@@ -26,6 +26,9 @@ function Dashboard() {
   const [datadaos, setDatadaos] = useState(false);
   const [singleDataDao, setSingleDataDao] = useState(false);
   const [showDataDao, setDataDao] = useState(false);
+  const [daoAddress, setDaoAddress] = useState();
+  const [singleYourDataDao, setSingleYourDataDao] = useState(false);
+
 
   const navigate = useNavigate();
 
@@ -236,18 +239,36 @@ function Dashboard() {
             </div>
           </>
         ) : yourDaos ? (
-          <YourDataDaoDetails />
+          <YourDaos
+            setSingleYourDataDao={setSingleYourDataDao}
+            setYourDaos={setYourDaos}
+            setDaoAddress={setDaoAddress}
+          />
         ) : proposals ? (
           <AvailabelProposal />
         ) : datadaos ? (
           <AllDataDaos
             setSingleDataDao={setSingleDataDao}
             setDatadaos={setDatadaos}
+            setDaoAddress={setDaoAddress}
           />
         ) : singleDataDao ? (
           <DataDaoDetails
+            datadaos={datadaos}
             setDatadaos={setDatadaos}
             setSingleDataDao={setSingleDataDao}
+            setYourDaos={setYourDaos}
+            yourDaos={yourDaos}
+            daoAddress={daoAddress}
+          />
+        ) : singleYourDataDao ? (
+          <YourDataDaoDetails
+            datadaos={datadaos}
+            setDatadaos={setDatadaos}
+            setSingleYourDataDao={setSingleYourDataDao}
+            setYourDaos={setYourDaos}
+            yourDaos={yourDaos}
+            daoAddress={daoAddress}
           />
         ) : null}
       </div>

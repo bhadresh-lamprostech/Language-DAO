@@ -29,6 +29,9 @@ function SamithaDashboard() {
   const [datadaos, setDatadaos] = useState(false);
   const [singleDataDao, setSingleDataDao] = useState(false);
   const [showDataDao, setDataDao] = useState(false);
+  const [singleYourDataDao, setSingleYourDataDao] = useState(false);
+  const [daoAddress, setDaoAddress] = useState();
+
 
   const navigate = useNavigate();
 
@@ -239,7 +242,11 @@ function SamithaDashboard() {
             </div>
           </>
         ) : yourDaos ? (
-          <SamithaDataDaoDetails />
+          <SamithaDaos
+            setSingleYourDataDao={setSingleYourDataDao}
+            setYourDaos={setYourDaos}
+            setDaoAddress={setDaoAddress}
+          />
         ) : proposals ? (
           <SamithaProposal />
         ) : datadaos ? (
