@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,7 +8,7 @@ import "../styles/SelectTemplate.scss";
 import { Button, CardActions } from "@mui/material";
 import img from "../assets/section3.jpg";
 // import TemplateDetails from "./TemplateDetails";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/Dashboard.scss";
 import Tokens from "../components/Tokens";
 import AvailabelProposal from "../components/AvailabelProposal";
@@ -16,11 +16,13 @@ import AllDataDaos from "../components/AllDataDaos";
 import DataDaoDetails from "../components/DataDaoDetails";
 
 function Dashboard() {
+  const location = useLocation();
   const [dashboard, setDashboard] = useState(true);
   const [proposals, setProposals] = useState(false);
   const [tokens, setTokens] = useState(false);
   const [datadaos, setDatadaos] = useState(false);
   const [singleDataDao, setSingleDataDao] = useState(false);
+  const [showDataDao, setDataDao] = useState(false);
 
   const navigate = useNavigate();
 
@@ -48,6 +50,12 @@ function Dashboard() {
       setDatadaos(true);
     }
   };
+
+  useEffect(() => {
+    if (location.state.hidedatadao) {
+      setDataDao(true);
+    }
+  }, []);
 
   const [data, setData] = useState([
     {
@@ -149,13 +157,14 @@ function Dashboard() {
             </svg> */}
             Tokens
           </li>
-          <li
-            className={datadaos ? "active" : ""}
-            onClick={() => {
-              dashboardLinks("DataDAOs");
-            }}
-          >
-            {/* <svg
+          {!showDataDao ? (
+            <li
+              className={datadaos ? "active" : ""}
+              onClick={() => {
+                dashboardLinks("DataDAOs");
+              }}
+            >
+              {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
               viewBox="0 0 24 24"
@@ -165,8 +174,11 @@ function Dashboard() {
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path d="M19 13H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM19 3H5c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
             </svg> */}
-            DataDAOs
-          </li>
+              DataDAOs
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
       </div>
       <div className="right-db">

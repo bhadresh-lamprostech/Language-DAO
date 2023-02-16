@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import "../styles/SelectTemplate.scss";
-import { Button, CardActions } from "@mui/material";
+// import { Button, CardActions } from "@mui/material";
 import img from "../assets/section3.jpg";
 // import TemplateDetails from "./TemplateDetails";
 import { useNavigate } from "react-router-dom";
@@ -16,14 +16,16 @@ function ExistingDaos() {
   const [data, setData] = useState([
     {
       cover: img,
-      title: "Template 1",
+      title: "Language DAO",
       info: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      hidedatadao: false,
     },
-    // {
-    //   cover: img,
-    //   title: "Template 2",
-    //   info: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-    // },
+    {
+      cover: img,
+      title: "Samhita DAO",
+      info: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      hidedatadao: true,
+    },
     // {
     //   cover: img,
     //   title: "Template 3",
@@ -32,7 +34,7 @@ function ExistingDaos() {
   ]);
   return (
     <div className="select-main">
-      <h1>Your DataDAOs</h1>
+      <h1>DataDAOs</h1>
       <p>Click on any datadao to open dashboard for that dao.</p>
       <div className="templates-div">
         {data.map((item, key) => {
@@ -51,12 +53,14 @@ function ExistingDaos() {
                       cover: item.cover,
                       title: item.title,
                       info: item.info,
+                      hidedatadao: item.hidedatadao,
                     },
                   });
                 }}
               >
                 <CardMedia
                   component="img"
+                  hidedatadao
                   height="180"
                   image={item.cover}
                   alt="green iguana"
