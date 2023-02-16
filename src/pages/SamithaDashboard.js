@@ -6,7 +6,8 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import "../styles/SelectTemplate.scss";
 import { Button, CardActions } from "@mui/material";
-import img from "../assets/section3.jpg";
+import img from "../assets/proposal.png";
+import img1 from "../assets/token.png";
 // import TemplateDetails from "./TemplateDetails";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/Dashboard.scss";
@@ -67,7 +68,7 @@ function SamithaDashboard() {
       info: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     },
     {
-      cover: img,
+      cover: img1,
       title: "Tokens",
       link: "Tokens",
       info: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",

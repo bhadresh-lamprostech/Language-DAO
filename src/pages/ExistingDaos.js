@@ -7,6 +7,7 @@ import { CardActionArea } from "@mui/material";
 import "../styles/SelectTemplate.scss";
 // import { Button, CardActions } from "@mui/material";
 import img from "../assets/section3.jpg";
+import img1 from "../assets/LOGO2.png";
 // import TemplateDetails from "./TemplateDetails";
 import { useNavigate } from "react-router-dom";
 
@@ -21,7 +22,7 @@ function ExistingDaos() {
       hidedatadao: false,
     },
     {
-      cover: img,
+      cover: img1,
       title: "Samhita DAO",
       info: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
       hidedatadao: true,
