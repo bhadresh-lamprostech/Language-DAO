@@ -28,8 +28,8 @@
 }
 
 #proposal-details-main {
-  min-height: 80vh;
-  max-height: 80vh;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .proposal-details {
