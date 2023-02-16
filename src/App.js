@@ -12,6 +12,7 @@ import SelectTemplate from "./components/SelectTemplate";
 import TemplateDetails from "./components/TemplateDetails";
 import CreateDao from "./components/stepsform/CreateDao";
 import Dashboard from "./pages/Dashboard";
+import SamithaDashboard from "./pages/SamithaDashboard";
 import ExistingDaos from "./pages/ExistingDaos";
 import Huddle from "./components/Huddle";
 function App() {
@@ -57,9 +58,10 @@ function App() {
                 element={<Dashboard />}
               />
               <Route
-                path="/huddle"
-                element={<Huddle />}
+                path="/open-existing-data-dao/samithadashboard"
+                element={<SamithaDashboard />}
               />
+              <Route path="/huddle" element={<Huddle />} />
             </Routes>
           </Router>
         </div>

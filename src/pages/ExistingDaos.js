@@ -48,14 +48,21 @@ function ExistingDaos() {
             >
               <CardActionArea
                 onClick={() => {
-                  navigate(`/open-existing-data-dao/${item.title}`, {
-                    state: {
-                      cover: item.cover,
-                      title: item.title,
-                      info: item.info,
-                      hidedatadao: item.hidedatadao,
-                    },
-                  });
+                  navigate(
+                    `${
+                      key === 1
+                        ? "/open-existing-data-dao/samithadashboard"
+                        : `/open-existing-data-dao/${item.title}`
+                    }`,
+                    {
+                      state: {
+                        cover: item.cover,
+                        title: item.title,
+                        info: item.info,
+                        hidedatadao: item.hidedatadao,
+                      },
+                    }
+                  );
                 }}
               >
                 <CardMedia
