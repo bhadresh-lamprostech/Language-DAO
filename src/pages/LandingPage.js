@@ -41,7 +41,7 @@ function LandingPage() {
           </div>
         </div>
         <div className="hero-right">
-          <Magnifier src={Hero} alt="hero" />
+          <Magnifier src={Hero} alt="hero" mgWidth={300} mgHeight={300}/>
         </div>
       </div>
       <div className="hero-footer">

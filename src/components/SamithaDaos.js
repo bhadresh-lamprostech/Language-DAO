@@ -198,7 +198,9 @@ function SamithaDaos({ setSingleYourDataDao, setYourDaos, setDaoAddress }) {
                       onClick={() => {
                         setSingleYourDataDao(true);
                         setYourDaos(false);
-                        setDaoAddress(dao.dataDaoAddress);
+                        setDaoAddress(
+                          "0x0a67f69e821d09df2cd9415645b1a86ee2dbe0e7"
+                        );
                       }}
                     >
                       View More

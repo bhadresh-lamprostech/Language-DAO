@@ -253,11 +253,25 @@ function SamithaDashboard() {
           <AllDataDaos
             setSingleDataDao={setSingleDataDao}
             setDatadaos={setDatadaos}
+            setDaoAddress={setDaoAddress}
           />
         ) : singleDataDao ? (
           <DataDaoDetails
+            datadaos={datadaos}
             setDatadaos={setDatadaos}
             setSingleDataDao={setSingleDataDao}
+            setYourDaos={setYourDaos}
+            yourDaos={yourDaos}
+            daoAddress={daoAddress}
+          />
+        ) : singleYourDataDao ? (
+          <SamithaDataDaoDetails
+            datadaos={datadaos}
+            setDatadaos={setDatadaos}
+            setSingleYourDataDao={setSingleYourDataDao}
+            setYourDaos={setYourDaos}
+            yourDaos={yourDaos}
+            daoAddress={daoAddress}
           />
         ) : null}
       </div>

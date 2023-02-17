@@ -79,6 +79,7 @@ function SamithaDataDaoDetails({
   const getDataDaos = async () => {
     const contract = await getContract();
     const dataDao = await contract.allDataDaos(daoAddress);
+    console.log(daoAddress)
     setDataDaoInfo(dataDao);
     console.log(dataDao);
   };
