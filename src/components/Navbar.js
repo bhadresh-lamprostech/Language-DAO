@@ -124,14 +124,14 @@ function Navbar() {
           </Box> */}
           <div className="conncet-btn-div">
             <ConnectButton
-              accountStatus={{
-                smallScreen: "avatar",
-                largeScreen: "full",
-              }}
-              showBalance={{
-                smallScreen: false,
-                largeScreen: true,
-              }}
+              // accountStatus={{
+              //   smallScreen: "avatar",
+              //   largeScreen: "full",
+              // }}
+              // showBalance={{
+              //   smallScreen: false,
+              //   largeScreen: true,
+              // }}
             />
           </div>
 
